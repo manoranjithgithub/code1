@@ -1,0 +1,5 @@
+<p>news works!</p>
+<div *ngFor="let newsItem of newsList; let i = index" class="news-item">
+    <h2 (click)="toggleExpansion(i)">{{ newsItem.title }}</h2>
+    <p *ngIf="newsItem.expanded">{{ newsItem.content }}</p>
+  </div>
